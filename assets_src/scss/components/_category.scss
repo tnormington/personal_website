@@ -1,0 +1,10 @@
+.category {
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  border: 1px solid $darkgray;
+  background-color: $gray;
+  color: $white;
+  @include marginRightNotLastChild(10px);
+  @include categoryName('.design', $red, $darkred);
+  @include categoryName('.developed', $teal, $medteal);
+}

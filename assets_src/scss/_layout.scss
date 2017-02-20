@@ -1,0 +1,28 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-image: linear-gradient(-135deg, $teal 0%, $darkteal 100%);
+  padding: 2em;
+}
+
+.content-wrapper {
+  flex: 1 0 0;
+  padding: 2em;
+  overflow-y: scroll;
+  .content {
+    height: 200vh;
+  }
+}

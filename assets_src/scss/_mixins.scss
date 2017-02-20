@@ -1,0 +1,14 @@
+@mixin marginRightNotLastChild($margin) {
+  margin-right: $margin;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@mixin categoryName($cat, $bgColor, $borderColor) {
+  &#{$cat} {
+    background-color: $bgColor;
+    border-color: $borderColor;
+  }
+}

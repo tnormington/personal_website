@@ -1,0 +1,14 @@
+.sidebar {
+  border-right: 10px solid $gold;
+  position: relative;
+  &:after {
+    width: 150px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba($black, 0), rgba($black, 0.25));
+  }
+}
