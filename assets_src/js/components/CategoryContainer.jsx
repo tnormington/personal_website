@@ -12,8 +12,8 @@ export default class CategoryContainer extends React.Component {
     };
   }
   componentWillMount() {
-    console.log('componentWillMount');
-    console.log('xhr going out to: '+'/wp-json/wp/v2/project_categories/'+this.props.id);
+    // console.log('componentWillMount');
+    // console.log('xhr going out to: '+'/wp-json/wp/v2/project_categories/'+this.props.id);
     this.serverRequest = axios.get('/wp-json/wp/v2/project_categories/'+this.props.id)
       .then((result) => {
         console.log(result);

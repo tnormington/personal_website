@@ -10,19 +10,35 @@ body {
 .main-wrapper {
   height: 100vh;
   display: flex;
+  overflow: hidden;
+  // padding-top: 52px;
 }
 
 .sidebar {
   flex: 0 0 250px;
   background-image: linear-gradient(-135deg, $teal 0%, $darkteal 100%);
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .content-wrapper {
+  position: relative;
   flex: 1 0 0;
-  padding: 2em;
-  overflow-y: scroll;
   .content {
-    height: 200vh;
+    // padding: 2em;
+    overflow-y: scroll;
+    max-width: 100%;
+    height: 100%;
   }
+}
+
+.portfolio {
+  // padding-top: 3em;
+  position: relative;
+  .topbar {
+    // position: fixed;
+  }
+}
+
+.portfolio__projects {
+  overflow-y: scroll;
 }

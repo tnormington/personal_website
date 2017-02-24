@@ -3,17 +3,16 @@ import axios from 'axios';
 
 
 // Components
-import Project from './Project.jsx';
-// import CategoryContainer from './CategoryContainer.jsx';
+import Post from './Post.jsx';
 
-export default class ProjectContainer extends React.Component {
+export default class PostContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   componentDidMount() {
-    console.log('projectcontainer: componentWillMount');
-    this.serverRequest = axios.get('/wp-json/wp/v2/projects/'+this.props.id)
+    console.log('postcontainer: componentWillMount');
+    this.serverRequest = axios.get('/wp-json/wp/v2/posts/'+this.props.id)
       .then((result) => {
         console.log(result.data);
         this.setState(result.data);
@@ -25,13 +24,10 @@ export default class ProjectContainer extends React.Component {
   render() {
     if(this.state.title) {
       return (
-        <Project
+        <Post
           classNames={this.props.classNames}
           title={this.state.title.rendered}
           content={this.state.content.rendered}
-          categories={this.state.project_categories}
-          keywords={this.state.project_keywords}
-          featured_media={this.state.featured_media}
           />
       )
     } else {

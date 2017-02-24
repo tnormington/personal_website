@@ -1,14 +1,23 @@
-@mixin marginRightNotLastChild($margin) {
+@mixin smartMarginRight($margin) {
   margin-right: $margin;
   &:last-child {
     margin-right: 0;
   }
 }
-
-
-@mixin categoryName($cat, $bgColor, $borderColor) {
-  &#{$cat} {
-    background-color: $bgColor;
-    border-color: $borderColor;
+@mixin smartMarginLeft($margin) {
+  margin-left: $margin;
+  &:last-child {
+    margin-left: 0;
   }
+}
+
+@mixin smartMarginBottom($margin) {
+  margin-bottom: $margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin bgGradient($percent) {
+  background-image: linear-gradient(rgba($black, 0) 0%, rgba($black, $percent) 100%);
 }

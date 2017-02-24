@@ -1,6 +1,7 @@
 .sidebar {
   border-right: 10px solid $gold;
   position: relative;
+  z-index: 10;
   &:after {
     width: 150px;
     height: 100%;

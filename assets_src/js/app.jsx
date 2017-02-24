@@ -8,7 +8,8 @@ import ContentTemplate from './templates/ContentTemplate.jsx';
 
 // Pages
 import Home from './pages/Home.jsx';
-import Portfolio from './pages/Portfolio.jsx';
+import PortfolioContainer from './pages/PortfolioContainer.jsx';
+import BlogContainer from './pages/BlogContainer.jsx';
 
 // Components
 // import Project from './components/Project.jsx';
@@ -28,8 +29,9 @@ class App extends React.Component {
         <Route path="/" component={BaseTemplate}>
           <Route component={ContentTemplate}>
             <IndexRoute component={Home}/>
-            <Route path="/portfolio" component={Portfolio}/>
+            <Route path="/portfolio" component={PortfolioContainer}/>
             <Route path="/portfolio/:id" component={ProjectContainer}/>
+            <Route path="/blog" component={BlogContainer}/>
           </Route>
         </Route>
       </Router>

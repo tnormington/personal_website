@@ -8,10 +8,10 @@
   padding: 0;
   list-style-type: none;
   li {
-    margin-bottom: 0.5em;
-    &:last-child {
-      margin-bottom: 0;
-    }
+    // margin-bottom: 0.5em;
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
   }
   a {
     font-size: 40px;
@@ -21,9 +21,26 @@
     text-align: right;
     display: block;
     transition: all 0.15s ease-out;
+    position: relative;
+    padding: 0.25em 0.25em;
+    &:after {
+      content: '';
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0%;
+      background-color: $gold;
+      transition: width 0.35s ease-out;
+      z-index: -1;
+    }
     &:hover {
-      padding-right: 0.5em;
-      color: $lightred;
+      // padding-right: 0.5em;
+      color: $teal;
+      &:after {
+        width: 100%;
+      }
     }
   }
 }

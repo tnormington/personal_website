@@ -13,6 +13,9 @@ export default class MainMenu extends React.Component {
           <li className="main-menu__link">
             <Link to="/portfolio" activeClassName="active">Portfolio</Link>
           </li>
+          <li className="main-menu__link">
+            <Link to="/blog" activeClassName="active">Blog</Link>
+          </li>
         </ul>
       </section>
     )

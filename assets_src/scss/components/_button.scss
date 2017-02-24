@@ -1,0 +1,29 @@
+.button {
+  transition: all 0.15s ease-out;
+  @include button;
+  @include buttonRound;
+  @include buttonHover($gray, $darkgray);
+  @include buttonActive($gray, $darkgray);
+  @include andCategoryName('.designed', $red, $darkred);
+  @include andCategoryName('.developed', $teal, $medteal);
+  @include smartMarginBottom(10px);
+  @include smartMarginRight(10px);
+  &.designed {
+    @include buttonHover($red, $darkred);
+    @include buttonActive($red, $darkred);
+  }
+  &.developed {
+    @include buttonHover($teal, $medteal);
+    @include buttonActive($teal, $medteal);
+  }
+}
+
+.button--icon {
+  min-height: 34px;
+  min-width: 34px;
+  padding: 0;
+}
+
+.topbar__button {
+  margin-bottom: 0;
+}

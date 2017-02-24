@@ -1,7 +1,10 @@
 <?php
 
 // Setup theme support
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
+
+// Link to Redux stuff
+// require_once (dirname(__FILE__) . '/redux_config/project_redux_config.php');
 
 
 // Custom Post Types

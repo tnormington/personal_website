@@ -1,0 +1,4 @@
+.keyword {
+  display: block;
+  @include smartMarginBottom(0.25em);
+}

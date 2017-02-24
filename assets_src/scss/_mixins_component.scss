@@ -1,0 +1,35 @@
+@mixin andCategoryName($cat, $bgColor, $borderColor) {
+  &#{$cat} {
+    background-color: $bgColor;
+    border-color: $borderColor;
+  }
+}
+
+@mixin button {
+  padding: 0.5em 1em;
+  border: 1px solid $darkgray;
+  background-color: $gray;
+  color: $white;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+@mixin buttonRound {
+  border-radius: 25px;
+}
+
+@mixin buttonHover($bgColor, $borderColor) {
+  &:hover {
+    box-shadow: 0 2px 6px rgba($black, 0.3);
+    background-color: lighten($bgColor, 10);
+    border-color: lighten($borderColor, 10);
+  }
+}
+
+@mixin buttonActive($bgColor, $borderColor) {
+  &:active {
+    box-shadow: 0 0 4px rgba($black, 0.25);
+    background-color: darken($bgColor, 10);
+    border-color: darken($borderColor, 10);
+  }
+}
